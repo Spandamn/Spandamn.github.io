@@ -7,10 +7,12 @@
 				text-align: center;
 				font-family: Verdana, Arial, Tahoma, sans-serif;
 				font-size: 11pt;
+				background-image: url('assets/back.jpg');
 			}
 			h1 {
 				font-family: Arial, Tahoma, Verdana, sans-serif;
 				font-weight: bold;
+				font-size: 30pt;
 			}
 			h2 {
 				border-bottom: 1px solid #818D98;
@@ -19,12 +21,19 @@
 				font-size: 13pt;
 				font-style: normal;
 			}
+			.social {
+				background: rgba(255, 255, 255, 0.8);
+			}
+			.intro {
+				background: rgba(255, 255, 255, 0.8);
+			}
 			.info {
 				border: 1px solid #818D98;
 				margin: 0 auto 20px auto;
 				padding: 1px 10px 8px 10px;
 				max-width: 8in;
 				text-align: left;
+				background: rgba(255, 255, 255, 0.8);
 			}
 			.contact {
 				border-bottom: 1px solid #818D98;
@@ -33,6 +42,7 @@
 				padding: 1px 10px 8px 10px;
 				max-width: 8in;
 				text-align: left;
+				background: rgba(255, 255, 255, 0.8);
 			}
 		-->
 	</style>
@@ -92,10 +102,10 @@
 				</div><button name="clickable" title="Toggle Image lol" onClick="hideImage()">-</button>
 			</div>
 			<br/><br/>
-			<h2>
+			<h2><div class="intro">
 				<p>Hello! My name is Spandan Punwatkar, and I'm a Computer Programmer. I also have many other interests, but i mainly work in the field of Computer Science.</p>
 				<p>I am studying at Jawaharlal Nehru Engineering College (Aurangabad, Mahrashtra, India), which is affiliated to Dr. Babasaheb Ambedkar Technological University (Lonere, Maharashtra, India).</p>
-			</h2>
+			</field></h2>
 			<br/><field id="allToggle"><button name="clickable" onClick="hideAll()" style="float: right;">Hide All</button></field><br/>
 			<div class="info" id="work">
 				<strong><h2>My Work<button name="clickable" onClick="hideWork()" style="float: right;">Hide</button></h2></strong>
@@ -146,7 +156,7 @@
 					<li><a href="http://github.com/Spandamn" target="_blank">Github Profile</a></li>
 				</ul>
 			</div>
-			<h2>You can download my CV below.</h2>
+			<h2><div class="intro">You can download my CV below.</div></h2>
 			<div class="social">
 				<a href="https://www.instagram.com/spandn" target="_blank" title="Instagram"><img src="assets/iglogo.png" alt="Instagram" height=60 width=60 hspace=30></a><a href="https://github.com/Spandamn" target="_blank" title="Github"><img src="assets/GitHub-Mark-64px.png" alt="Github" height=60 width=60 hspace=30></a><a href="assets/CV.pdf" target="_blank" title="My CV (PDF)"><img src="assets/doc.png" alt="CV" height=60 width=60 hspace=30></a>
 			</div>
