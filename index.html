@@ -44,6 +44,16 @@
 			}
 		-->
 	</style>
+	<script>
+		let innerHTML = '<div id="column">\n<img src="assets/picture.jpg" id="spandan" height=675 width=540>\n</div><button name="clickable" title="Toggle Image lol" onClick="hideImage()">-</button>';
+		function hideImage () {
+			document.getElementById("imageBlock").innerHTML = '<button name="clickable" title="Show me Spandan" onClick="showImage()">+</button>';
+		}
+		function showImage () {
+			document.getElementById("imageBlock").innerHTML = innerHTML;
+		}
+		// Idk what else can i put for JS in this simple ass website :(
+	</script>
 	<head>
 		<title>Spandan P's website</title>
 		<meta name="description" content="The webpage of Spandan Punwatkar, Computer Science & Engineering student.">
@@ -51,10 +61,10 @@
 	<body>
 		<div id="main">
 			<h1>Spandan C. Punwatkar</h1>
-			<div class="block">
+			<div class="block" id="imageBlock">
 				<div id="column">
 					<img src="assets/picture.jpg" id="spandan" height=675 width=540>
-				</div>
+				</div><button name="clickable" title="Toggle Image lol" onClick="hideImage()">-</button>
 			</div>
 			<br/><br/>
 			<h2>
