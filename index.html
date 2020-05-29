@@ -60,20 +60,22 @@
 			document.getElementById("work").innerHTML = "<strong><h2>My Work<button name=\"clickable\" onClick=\"showWork()\" style=\"float: right;\">Show</button></h2></strong>";
 		}
 		function hideStrength () {
-			document.getElementById("strength").innerHTML = "<strong><h2>My Strengths</h2><button name=\"clickable\" onClick=\"showStrength()\" style=\"float: right;\">Show</button></h2></strong>";
+			document.getElementById("strength").innerHTML = "<strong><h2>My Strengths<button name=\"clickable\" onClick=\"showStrength()\" style=\"float: right;\">Show</button></h2></strong>";
 		}
 		function hideHobby () {
-			document.getElementById("hobby").innerHTML = "<strong><h2>My Work</h2><button name=\"clickable\" onClick=\"showHobby()\" style=\"float: right;\">Show</button></h2></strong>";
+			document.getElementById("hobby").innerHTML = "<strong><h2>My Hobbies<button name=\"clickable\" onClick=\"showHobby()\" style=\"float: right;\">Show</button></h2></strong>";
 		}
 		function hideAll () {
 			hideHobby();
 			hideWork();
 			hideStrength();
+			document.getElementById("allToggle").innerHTML = '<button name="clickable" onClick="showAll()" style="float: right;">Show All</button>';
 		}
 		function showAll () {
 			showHobby();
 			showWork();
 			showStrength();
+			document.getElementById("allToggle").innerHTML = '<button name="clickable" onClick="hideAll()" style="float: right;">Hide All</button>';
 		}
 		// Idk what else can i put for JS in this simple ass website :(
 	</script>
@@ -94,7 +96,7 @@
 				<p>Hello! My name is Spandan Punwatkar, and I'm a Computer Programmer. I also have many other interests, but i mainly work in the field of Computer Science.</p>
 				<p>I am studying at Jawaharlal Nehru Engineering College (Aurangabad, Mahrashtra, India), which is affiliated to Dr. Babasaheb Ambedkar Technological University (Lonere, Maharashtra, India).</p>
 			</h2>
-			<br/><br/>
+			<br/><field id="allToggle"><button name="clickable" onClick="hideAll()" style="float: right;">Hide All</button></field><br/>
 			<div class="info" id="work">
 				<strong><h2>My Work<button name="clickable" onClick="hideWork()" style="float: right;">Hide</button></h2></strong>
 				<ul>
