@@ -8,6 +8,7 @@
 				font-family: Verdana, Arial, Tahoma, sans-serif;
 				font-size: 11pt;
 				background-image: url('assets/back.jpg');
+				scroll-behavior: smooth;
 			}
 			h1 {
 				font-family: Arial, Tahoma, Verdana, sans-serif;
@@ -51,6 +52,9 @@
 				max-width: 8in;
 				text-align: left;
 				background: rgba(0, 0, 0, 0.8);
+			}
+			.navigate {
+				margin: 20px 0;
 			}
 			a {
 				color: #00FFFF;
@@ -116,6 +120,7 @@
 			<h2><div class="intro">
 				<p>Hello! My name is Spandan Punwatkar, and I'm a Computer Programmer. I also have many other interests, but I mainly work in the field of Computer Science.</p>
 				<p>I am studying at Jawaharlal Nehru Engineering College (Aurangabad, Maharashtra, India), which is affiliated to Dr. Babasaheb Ambedkar Technological University (Lonere, Maharashtra, India).</p>
+				<div class="navigate"><a href="#work"><button id="workScroll "title="My Work" alt="My Work" style="margin:30;font-size:14pt;">My Work</button></a><a href="#strength"><button id="strengthScroll "title="My Strengths" alt="My Strengths" style="margin:30;font-size:14pt;">My Strengths</button></a><a href="#hobby"><button id="hobbyScroll "title="My Hobbies" alt="My Hobbies" style="margin:30;font-size:14pt;">My Hobbies</button></a></div>
 			</field></h2>
 			<br/><field id="allToggle"><button name="clickable" onClick="hideAll()" style="float: right;">Hide All</button></field><br/>
 			<div class="info" id="work"></div>
