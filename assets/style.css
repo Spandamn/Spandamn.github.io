@@ -4,6 +4,7 @@ html {
 	font-family: Verdana, Arial, Tahoma, sans-serif;
 	font-size: 12pt;
 	scroll-behavior: smooth;
+	background: #000000;
 }
 h1 {
 	margin: 0px;
@@ -20,8 +21,8 @@ h2 {
 	font-style: normal;
 }
 section {
-	padding: 5px;
-	margin: 10px;
+	padding: auto;
+	margin: auto;
 	border-bottom: 1px solid #000000;
 }
 a {
@@ -29,12 +30,11 @@ a {
 }
 .social {
 	padding: 5px;
-	margin: 10px 0;
-	display: flex;
-	justify-content: center;
-	align-items: center; 
-	text-align: center;
-	background: rgba(255, 255, 255, 0.85);
+	background: rgba(255, 255, 255, 0.7);
+}
+.social img {
+	margin-left: 60px;
+	margin-right: 60px;
 }
 .intro {
 	border-radius: 25px;
@@ -47,57 +47,59 @@ a {
 	color: #C0C0C0;
 	border: 1px solid #000000;
 	border-radius: 10px;
-	margin: 10 auto 20 auto;
+	margin: 0 auto;
 	padding: 5px 10px 8px 10px;
-	max-width: 8in;
-	text-align: left;
+	max-width: 10in;
 	background: rgba(0, 0, 0, 0.8);
+	text-align: left;
+}
+.info a {
+	color: #00FFFF;
 }
 .infolite {
 	color: #000000;
 	border: 1px solid #C0C0C0;
 	border-radius: 10px;
-	margin: 10 auto 20px auto;
+	margin: 0 auto;
 	padding: 5px 10px 8px 10px;
-	max-width: 8in;
-	text-align: left;
+	max-width: 10in;
 	background: rgba(255, 255, 255, 0.69);
+	text-align: left;
 }
 .sec1 {
 	z-index: 6;
 	background-image: url('back.jpg');
 	background-position: center center;
 	background-repeat: no-repeat;
-	background-size: 100%,100%;
+	background-size: cover;
 }
 .sec2 {
 	z-index: 5;
 	background-image: url('back7.jpg');
 	background-position: center center;
 	background-repeat: no-repeat;
-	position: relative;
-	background-origin: 100%,100%;
+	background-size: cover;
 }
 .sec3 {
 	z-index: 4;
 	background-image: url('back3.jpg');
 	background-position: center center;
 	background-repeat: no-repeat;
-	background-origin: 100%,100%;
+	background-size: cover;
 }
 .sec4 {
 	z-index: 3;
 	background-image: url('back5.jpg');
 	background-position: center center;
 	background-repeat: no-repeat;
-	background-origin: 100%,100%;
+	background-size: cover;
 }
 .sec5 {
 	z-index: 2;
 	background-image: url('back6.jpg');
 	background-position: center center;
 	background-repeat: no-repeat;
-	background-size: 100%,100%;
+	background-size: cover;
 }
 .sec6 {
 	z-index: 1;
