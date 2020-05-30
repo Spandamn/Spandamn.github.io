@@ -1,148 +1,48 @@
 <html>
-	<style>
-		<!--
-			html {
-				margin: 0;
-				padding: 20px;
-				text-align: center;
-				font-family: Verdana, Arial, Tahoma, sans-serif;
-				font-size: 12pt;
-				scroll-behavior: smooth;
-				background-image: url('assets/back.jpg');
-				background-position: center center;
-				background-repeat: no-repeat;
-				background-color: #C0C0C0;
-				background-size: cover;
-			}
-			h1 {
-				font-family: Arial, Tahoma, Verdana, sans-serif;
-				font-weight: bold;
-				font-size: 30pt;
-			}
-			h2 {
-				border-bottom: 1px solid #C0C0C0;
-				padding: 5px;
-				margin: 10px 0;
-				font-size: 13pt;
-				font-style: normal;
-			}
-			.social {
-				padding: 5px;
-				margin: 5px 0;
-				background: rgba(255, 255, 255, 0.85);
-			}
-			.intro {
-				border-radius: 25px;
-				margin: 10px 0;
-				padding: 5px;
-				color: #C0C0C0;
-				background: rgba(0, 0, 0, 0.8);
-			}
-			.info {
-				color: #C0C0C0;
-				border: 1px solid #C0C0C0;
-				border-radius: 10px;
-				margin: 0 auto 20px auto;
-				padding: 1px 10px 8px 10px;
-				max-width: 8in;
-				text-align: left;
-				background: rgba(0, 0, 0, 0.8);
-			}
-			.contact {
-				color: #C0C0C0;
-				border-bottom: 1px solid #C0C0C0;
-				border-radius: 10px;
-				border: 1px solid #C0C0C0;
-				margin: 0 auto 20px auto;
-				padding: 1px 10px 8px 10px;
-				max-width: 8in;
-				text-align: left;
-				background: rgba(0, 0, 0, 0.8);
-			}
-			.navigate {
-				margin: 20px 0;
-			}
-			a {
-				color: #00FFFF;
-			}
-		-->
-	</style>
-	<script>
-		let imageHTML = '<div id="column">\n<img src="assets/picture.jpg" id="spandan" height=675 width=540>\n</div><button name="clickable" title="Toggle Image lol" onClick="hideImage()">-</button>';
-		let workHTML = '<ul>\n\t\t\t\t\t<li>I\'m a contributor to <a href="https://pokemonshowdown.com" target="_blank">Pokemon Showdown</a>, an online game simulator which averages 32 thousand+ users. I am also <a href="https://github.com/smogon/pokemon-showdown#credits" target="_blank">credited for contributing</a>.</li>\n\t\t\t\t\t<li>I have written an independant <a href="https://github.com/Spandamn/Pokemon-Showdown-Java-Bot" target="_blank">bot</a> for Pokemon Showdown in Java, which is the only bot for the website written in Java.</li>\n\t\t\t\t\t<li>I have forked and worked on a <a href="https://github.com/Spandamn/Abyssal-Bot" target="_blank">JavaScript based Pokemon Showdown Bot</a>.</li>\n\t\t\t\t\t<li>I have written more than 12 poems, although I dont intend to publish them haha.</li>\n\t\t\t\t\t<li>I have also forked and worked on a <a href="https://github.com/Spandamn/DH" target="_blank">side server of Pokemon Showdown</a>.</li>\n\t\t\t\t\t<li>I created a game webpage for second year internals <a href="https://pokemonshowdown.com" target="_blank">HTML Project</a> using mainly JavaScript.</li>\n\t\t\t\t\t<li>I created a node.js based <a href="https://gist.github.com/Spandamn/08e4a4ac3f0f52bcb5afd7ed94474c10" target="_blank">script</a> which extracts messages from messages.json (from Instagram\'s data dumps) and creates separate .txt files for Instagram DMs with different people.</li>\n\t\t\t\t\t<li>I created a node.js based <a href="https://gist.github.com/Spandamn/754d4c68f1d389ddec76389cae29a151" target="_blank">script</a> which attempts to fix lagging or early subtitles for movies.</li>\n\t\t\t\t\t<li>I created <a href="https://gist.github.com/Spandamn/47135e8e830f5a75205539a59a53cce4" target="_blank">3 games</a> written in Java for my 10th grade ICSE project for Computer Applications.</li>\n\t\t\t\t</ul>';
-		let strenHTML = '<ul>\n\t\t\t\t\t<li>I started programming with C++ from 7th grade at <a href="https://singhaniaschool.org" target="_blank">Smt. Sulochanadevi Singhania School.</a></li>\n\t\t\t\t\t<li>I chose Computer Applications as my optional subject in 9th grade, and studied Java for 4 years there.</li>\n\t\t\t\t\t<li>Since I have been using Computers since I was a small child, my typing speed is faster than most people.</li>\n\t\t\t\t\t<li>I use Github, and have knowledge of using git.</li>\n\t\t\t\t\t<li>I have studied JavaScript, HTML by contributing to Pokemon Showdown for 4+ years. My main strength is server side programming through node.js.</li>\n\t\t\t\t\t<li>I studied C and Python at JNEC Aurangabad, and also studied Python through outside courses.</li>\n\t\t\t\t\t<li>I\'ve been using Linux since I was 16; hence I am well versed with Linux terminal commands. I use Ubuntu 20.04 as my main OS.</li>\n\t\t\t\t\t<li>I have also studied and know how to use digital graphics tools like Corel Draw and Inkscape. I have designed logos and business cards for my friend\'s startups using these softwares.</li>\n\t\t\t\t\t<li>I can also operate Microsoft Office software well.</li>\n\t\t\t\t\t<li>My curiosity to learn more keeps me motivated to learn new things in the computer science field.</li><li>This website was not made using tools like Wordpress, I hard-coded it.</li>\n\t\t\t\t</ul>';
-		let hobbyHTML = '<ul>\n\t\t\t\t\t<li>I like playing sports like badminton, football, etc.</li>\n\t\t\t\t\t<li>I also learned to play the guitar.</li>\n\t\t\t\t\t<li>I like listening to music.</li>\n\t\t\t\t\t<li>I like programming.</li>\n\t\t\t\t\t<li>Learning new languages is also one of my interests.</li>\n\t\t\t\t\t<li>Contributing to <a href="https://pokemonshowdown.com" target="_blank">Pokemon Showdown.</a> is also one of my hobbies.</li>\n\t\t\t\t\t<li>Following my curiosity towards new and interesting things is the thing that keeps me going.</li>\n\t\t\t\t\t<li>I also occasionally write Poetry.</li>\n\t\t\t\t</ul>';
-		function hideImage () {
-			document.getElementById("imageBlock").innerHTML = '<button name="clickable" title="Show me Spandan" onClick="showImage()">+</button>';
-		}
-		function showImage () {
-			document.getElementById("imageBlock").innerHTML = imageHTML;
-		}
-		function showWork () {
-			document.getElementById("work").innerHTML = '<strong><h2>My Work<button name="clickable" onClick="hideWork()" style="float: right">Hide</button></h2></strong>\n\t\t\t\t' + workHTML;
-		}
-		function showStrength () {
-			document.getElementById("strength").innerHTML = '<strong><h2>My Strengths<button name="clickable" onClick="hideStrength()" style="float: right">Hide</button></h2></strong>\n\t\t\t\t' + strenHTML;
-		}
-		function showHobby () {
-			document.getElementById("hobby").innerHTML = '<strong><h2>My Hobbies<button name="clickable" onClick="hideHobby()" style="float: right">Hide</button></h2></strong>\n\t\t\t\t' + hobbyHTML;
-		}
-		function hideWork () {
-			document.getElementById("work").innerHTML = "<strong><h2>My Work<button name=\"clickable\" onClick=\"showWork()\" style=\"float: right;\">Show</button></h2></strong>\n\t\t\t\t";
-		}
-		function hideStrength () {
-			document.getElementById("strength").innerHTML = "<strong><h2>My Strengths<button name=\"clickable\" onClick=\"showStrength()\" style=\"float: right;\">Show</button></h2></strong>\n\t\t\t\t";
-		}
-		function hideHobby () {
-			document.getElementById("hobby").innerHTML = "<strong><h2>My Hobbies<button name=\"clickable\" onClick=\"showHobby()\" style=\"float: right;\">Show</button></h2></strong>\n\t\t\t\t";
-		}
-		function hideAll () {
-			hideHobby();
-			hideWork();
-			hideStrength();
-			document.getElementById("allToggle").innerHTML = '<button name="clickable" onClick="showAll()" style="float: right;">Show All</button>';
-		}
-		function showAll () {
-			showHobby();
-			showWork();
-			showStrength();
-			document.getElementById("allToggle").innerHTML = '<button name="clickable" onClick="hideAll()" style="float: right;">Hide All</button>';
-		}
-		// Idk what else can i put for JS in this simple ass website :(
-	</script>
+	<script type = "text/javascript" src = "assets/script.js"></script>
+	<link rel="stylesheet" href="assets/style.css">
 	<head>
 		<title>Spandan Punwatkar</title>
 		<meta name="description" content="I created this simple webpage for me">
+		<meta charset="utf-8">
 	</head>
 	<body onload="showAll()">
-		<div id="main">
-			<h1>Spandan C. Punwatkar</h1>
-			<div class="block" id="imageBlock">
-				<div id="column">
-					<img src="assets/picture.jpg" id="spandan" height=675 width=540>
-				</div><button name="clickable" title="Toggle Image lol" onClick="hideImage()">-</button>
+		<div id="pagepiling" class="main" style="overflow: hidden; touch-action: none;">
+			<header class="sec1" data-overlay-dark="6" data-background="assets/back.jpg" id="section1" data-scroll-index="0" data-anchor="page1"><div class="pp-tableCell" style="height:100%">
+				<h1>Spandan C. Punwatkar</h1>
+				<div class="block" id="imageBlock">
+					<div id="column">
+						<img src="assets/picture.jpg" id="spandan" height=534 width=427 style="border: 5px solid #FFFFFF;">
+					</div><button name="clickable" title="Toggle Image lol" onClick="hideImage()">-</button>
+				</div>
+				<br/>
+				<h2><div class="intro">
+					<p>Hello! My name is Spandan Punwatkar, and I'm a Computer Programmer. I also have many other interests, but I mainly work in the field of Computer Science.</p>
+					<p>I am studying at Jawaharlal Nehru Engineering College (Aurangabad, Maharashtra, India), which is affiliated to Dr. Babasaheb Ambedkar Technological University (Lonere, Maharashtra, India).</p>
+					<div class="navigate"><a href="#work"><button id="workScroll "title="My Work" alt="My Work" style="margin-right:100;font-size:14pt;">My Work</button></a><a href="#strength"><button id="strengthScroll "title="My Strengths" alt="My Strengths" style="margin-right:100;font-size:14pt;">My Strengths</button></a><a href="#hobby"><button id="hobbyScroll "title="My Hobbies" alt="My Hobbies" style="font-size:14pt;">My Hobbies</button></a></div>
+				</field></h2></div>
+			</header>
+			<section class="sec2" id="section2" data-scroll-index="1" data-anchor="page2">
+				<div class="pp-tableCell" style="height:100%">
+					<div class="infolite" id="work"></div>
+				</div>
+			</section>
+			<section class="sec3" id="section3" data-scroll-index="2" data-anchor="page3">
+				<div class="pp-tableCell" style="height:100%">
+					<div class="info" id="strength"></div>
+				</div>
+			</section>
+			<section class="sec4" id="section4" data-scroll-index="3" data-anchor="page4">
+				<div class="pp-tableCell" style="height:100%">
+					<div class="info" id="hobby"></div>
+				</div>
+			</section>
+			<section class="sec5" id="section5" data-scroll-index="4" data-anchor="page5">
+				<div class="pp-tableCell" style="height:100%"><div class="social">
+				<a href="https://www.linkedin.com/in/spandan-punwatkar-b602891a3/" target="_blank" title="LinkedIn"><img src="assets/lilogo.png" alt="LinkedIn" height=51 width=60 hspace=30></a><a href="https://www.instagram.com/spandn" target="_blank" title="Instagram"><img src="assets/iglogo.png" alt="Instagram" height=60 width=60 hspace=30></a><a href="https://github.com/Spandamn" target="_blank" title="Github"><img src="assets/GitHub-Mark-64px.png" alt="Github" height=60 width=60 hspace=30></a><a href="assets/CV.pdf" target="_blank" title="My CV (PDF)"><img src="assets/doc.png" alt="CV" height=60 width=60 hspace=30></a><a href="mailto:spendamn@gmail.com" target="_blank" title="Email Address"><img src="assets/gmail.png" alt="Email" height=60 width=60 hspace=30></a>
+				</div>
 			</div>
-			<br/><br/>
-			<h2><div class="intro">
-				<p>Hello! My name is Spandan Punwatkar, and I'm a Computer Programmer. I also have many other interests, but I mainly work in the field of Computer Science.</p>
-				<p>I am studying at Jawaharlal Nehru Engineering College (Aurangabad, Maharashtra, India), which is affiliated to Dr. Babasaheb Ambedkar Technological University (Lonere, Maharashtra, India).</p>
-				<div class="navigate"><a href="#work"><button id="workScroll "title="My Work" alt="My Work" style="margin-right:100;font-size:14pt;">My Work</button></a><a href="#strength"><button id="strengthScroll "title="My Strengths" alt="My Strengths" style="margin-right:100;font-size:14pt;">My Strengths</button></a><a href="#hobby"><button id="hobbyScroll "title="My Hobbies" alt="My Hobbies" style="font-size:14pt;">My Hobbies</button></a></div>
-			</field></h2>
-			<br/><field id="allToggle"><button name="clickable" onClick="hideAll()" style="float: right;">Hide All</button></field><br/>
-			<div class="info" id="work"></div>
-			<div class="info" id="strength"></div>
-			<div class="info" id="hobby"></div>
-			<div class="contact" id="contact">
-				<strong><u>Contact<u></strong>
-				<ul>
-					<li>spendamn@gmail.com (Email)</li>
-					<li><a href="http://github.com/Spandamn" target="_blank">Github Profile</a></li>
-				</ul>
-			</div>
-			<h2><div class="intro">You can download my CV below.</div></h2>
-			<div class="social">
-				<a href="https://www.linkedin.com/in/spandan-punwatkar-b602891a3/" target="_blank" title="LinkedIn"><img src="assets/lilogo.png" alt="LinkedIn" height=51 width=60 hspace=30></a><a href="https://www.instagram.com/spandn" target="_blank" title="Instagram"><img src="assets/iglogo.png" alt="Instagram" height=60 width=60 hspace=30></a><a href="https://github.com/Spandamn" target="_blank" title="Github"><img src="assets/GitHub-Mark-64px.png" alt="Github" height=60 width=60 hspace=30></a><a href="assets/CV.pdf" target="_blank" title="My CV (PDF)"><img src="assets/doc.png" alt="CV" height=60 width=60 hspace=30></a>
-			</div>
+			</section>
 		</div>
 	</body>
 </html>
