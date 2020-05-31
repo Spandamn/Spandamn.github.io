@@ -1,39 +1,25 @@
 <html>
 	<style>
-
-
-.pentagon {
-	position: relative;
-	width: 54px;
-	border-width: 50px 18px 0;
-	border-style: solid;
-	border-color: #01ff70 transparent;
-}
-.pentagon:before {
-	content: "";
-	position: absolute;
-	height: 0;
-	width: 0;
-	top: -85px;
-	left: -18px;
-	border-width: 0 45px 35px;
-	border-style: solid;
-	border-color: transparent transparent #01ff70;
-}
-
-body, html {
-  height: 100%;
-}
-
-body {
-  background-color: #333;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+		.circle-container {
+			@include on-circle($item-count: 8, $circle-size: 20em, $item-size: 6em); 
+			margin: 5em auto 0;
+			border: solid 5px tomato;
+				img { 
+				display: block; 
+				max-width: 100%; 
+				border-radius: 50%;
+				filter: grayscale(100%);
+				border: solid 5px tomato;
+				transition: .15s;
+				
+				&:hover,
+				&:active {
+					filter: grayscale(0);
+				}
+			}
+		}
 	</style>
 	<body>
-		<div class = "pentagon"></div>
 		<ul class="circle-container">
 			<li><a href="https://www.linkedin.com/in/spandan-punwatkar-b602891a3/" target="_blank" title="LinkedIn"><img src="assets/lilogo.png" title="LinkedIn" alt="LinkedIn" height=51 width=60></a></li>
 			<li><a href="https://www.instagram.com/spandn" target="_blank" title="Instagram"><img src="assets/iglogo.png" alt="Instagram" height=60 width=60></a></li>

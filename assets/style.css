@@ -7,11 +7,13 @@ html {
 	background: #000000;
 }
 h1 {
+	color: #FEE715;
 	margin: 0px;
 	padding:10px;
 	font-family: Arial, Tahoma, Verdana, sans-serif;
 	font-weight: bold;
 	font-size: 30pt;
+	text-shadow: 0 0 5px #101820, 0 0 5px #FEE715;
 }
 h2 {
 	border-bottom: 1px solid #C0C0C0;
@@ -36,12 +38,30 @@ a {
 	margin-left: 60px;
 	margin-right: 60px;
 }
+.navigate button {
+	margin-left: 100px;
+	margin-right: 100px;
+	font-size: 14pt;
+}
 .intro {
 	border-radius: 25px;
 	margin: 10px 0;
 	padding: 5px;
 	color: #C0C0C0;
 	background: rgba(0, 0, 0, 0.8);
+}
+.pp-tableCell {
+	padding: 300px;
+}
+.infolite {
+	color: #000000;
+	border: 1px solid #C0C0C0;
+	border-radius: 10px;
+	margin: 0 auto;
+	padding: 5px 10px 8px 10px;
+	max-width: 10in;
+	background: rgba(255, 255, 255, 0.69);
+	text-align: left;
 }
 .info {
 	color: #C0C0C0;
@@ -55,16 +75,6 @@ a {
 }
 .info a {
 	color: #00FFFF;
-}
-.infolite {
-	color: #000000;
-	border: 1px solid #C0C0C0;
-	border-radius: 10px;
-	margin: 0 auto;
-	padding: 5px 10px 8px 10px;
-	max-width: 10in;
-	background: rgba(255, 255, 255, 0.69);
-	text-align: left;
 }
 .sec1 {
 	z-index: 6;
