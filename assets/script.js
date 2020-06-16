@@ -1,6 +1,6 @@
 'use strict';
 
-let imageHTML = '<div id=\"column\">\n\t\t\t\t\t<img src=\"assets/picture.jpg\" alt=\"Spandan\" id=\"spandan\" height=534 width=427 style=\"border: 5px solid #FFFFFF;\">\n\t\t\t\t</div><button name=\"clickable\" title=\"Toggle Image lol\" onClick=\"hideImage()\">-</button>';
+let imageHTML = document.getElementById("imageBlock").innerHTML;
 
 let workHTML = '<strong><h2>My Work</h2></strong>\n<ul>\n\t\t\t\t\t<li>I\'m a contributor to <a href="https://pokemonshowdown.com" target="_blank">Pokemon Showdown</a>, an online game simulator which averages 32 thousand+ users. I am also <a href="https://github.com/smogon/pokemon-showdown#credits" target="_blank">credited for contributing</a>.</li>\n\t\t\t\t\t<li>I have written an independant <a href="https://github.com/Spandamn/Pokemon-Showdown-Java-Bot" target="_blank">bot</a> for Pokemon Showdown in Java, which is the only bot for the website written in Java.</li>\n\t\t\t\t\t<li>I have forked and worked on a <a href="https://github.com/Spandamn/Abyssal-Bot" target="_blank">JavaScript based Pokemon Showdown Bot</a>.</li>\n\t\t\t\t\t<li>I have written more than 12 poems, although I dont intend to publish them haha.</li>\n\t\t\t\t\t<li>I have also forked and worked on a <a href="https://github.com/Spandamn/DH" target="_blank">side server of Pokemon Showdown</a>.</li>\n\t\t\t\t\t<li>I created a game webpage for second year internals <a href="https://pokemonshowdown.com" target="_blank">HTML Project</a> using mainly JavaScript.</li>\n\t\t\t\t\t<li>I created a node.js based <a href="https://gist.github.com/Spandamn/08e4a4ac3f0f52bcb5afd7ed94474c10" target="_blank">script</a> which extracts messages from messages.json (from Instagram\'s data dumps) and creates separate .txt files for Instagram DMs with different people.</li>\n\t\t\t\t\t<li>I created a node.js based <a href="https://gist.github.com/Spandamn/754d4c68f1d389ddec76389cae29a151" target="_blank">script</a> which attempts to fix lagging or early subtitles for movies.</li>\n\t\t\t\t\t<li>I created <a href="https://gist.github.com/Spandamn/47135e8e830f5a75205539a59a53cce4" target="_blank">3 games</a> written in Java for my 10th grade ICSE project for Computer Applications.</li>\n\t\t\t\t</ul>';
 
@@ -8,12 +8,18 @@ let strenHTML = '<strong><h2>My Strengths</h2></strong>\n<ul>\n\t\t\t\t\t<li>I s
 
 let hobbyHTML = '<strong><h2>My Hobbies</h2></strong>\n<ul>\n\t\t\t\t\t<li>I like playing sports like badminton, football, etc.</li>\n\t\t\t\t\t<li>I also learned to play the guitar.</li>\n\t\t\t\t\t<li>I like listening to music.</li>\n\t\t\t\t\t<li>I like programming.</li>\n\t\t\t\t\t<li>Learning new languages is also one of my interests.</li>\n\t\t\t\t\t<li>Contributing to <a href="https://pokemonshowdown.com" target="_blank">Pokemon Showdown.</a> is also one of my hobbies.</li>\n\t\t\t\t\t<li>Following my curiosity towards new and interesting things is the thing that keeps me going.</li>\n\t\t\t\t\t<li>I also occasionally write Poetry.</li>\n\t\t\t\t</ul>';
 
-function hideImage () {
-	document.getElementById("imageBlock").innerHTML = '<button name="clickable" title="Show me Spandan" onClick="showImage()">+</button>';
-};
-
-function showImage () {
-	document.getElementById("imageBlock").innerHTML = imageHTML;
+function toggleImage () {
+	let button = document.getElementById("togglePhoto");
+	if (!button) return;
+	if (button.innerHTML === '-') {
+		document.getElementById("imageBlock").innerHTML = "";
+		button.innerHTML = "+";
+		button.setAttribute('title', "Show me Spandan");
+	} else {
+		document.getElementById("imageBlock").innerHTML = imageHTML;
+		button.innerHTML = "-";
+		buttonsetAttribute('title', "Toggle Photo Lol");
+	}
 };
 
 function showWork () {
@@ -32,5 +38,15 @@ function showAll () {
 	showHobby();
 	showWork();
 	showStrength();
+};
+
+function onButtonHoverActivePassiveSwitch (calling) {
+	if (!calling) return;
+	let button = document.getElementById(calling);
+	let toggleOptions = ["btn-secondary", "btn-primary"];
+	if (!button.getAttribute('class')) return;
+	let currentClass = button.getAttribute('class').substring(4);
+	if (!toggleOptions.includes(currentClass)) return;
+	button.setAttribute('class', `btn ${toggleOptions[toggleOptions.indexOf(currentClass) ^ 1]}`);
 };
 // Idk what else can i put for JS in this simple ass website :(

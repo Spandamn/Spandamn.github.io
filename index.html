@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<link type="text/css" rel="stylesheet" href="assets/style.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 		<title>Spandan Punwatkar</title>
 		<meta name="description" content="I created this simple webpage for me">
 		<meta name="viewport" content="width=device-width", initial-scale=1>
@@ -9,11 +10,9 @@
 	<body onload="showAll()">
 		<header class="sec1" data-overlay-dark="6" data-background="assets/back.jpg" id="section1" data-scroll-index="0" data-anchor="page1">
 				<h1>Spandan C. Punwatkar</h1>
-				<div class="block" id="imageBlock">
-					<div id="column">
-						<img src="assets/picture.jpg" alt="Spandan" id="spandan" height=534 width=427 style="border: 5px solid #FFFFFF;">
-					</div><button name="clickable" title="Toggle Image lol" onClick="hideImage()">-</button>
-				</div>
+				<div id="imageBlock">
+					<img src="assets/picture.jpg" alt="Spandan" id="spandan" height=534 width=427 style="border: 5px solid #FFFFFF;">	
+				</div><button id="togglePhoto" class="btn btn-secondary" title="Toggle Image lol" onmouseover="onButtonHoverActivePassiveSwitch(this.id)" onmouseout="onButtonHoverActivePassiveSwitch(this.id)" onclick="toggleImage()">-</button>
 				<br/>
 				<div class="intro">
 					<h2>
@@ -21,7 +20,7 @@
 						I am studying at Jawaharlal Nehru Engineering College (Aurangabad, Maharashtra, India), which is affiliated to Dr. Babasaheb Ambedkar Technological University (Lonere, Maharashtra, India).
 					</h2>
 					<div class="navigate">
-						<a href="#work"><button id="workBox" title="My Work">My Work</button></a>|<a href="#section3"><button id="strengthBox" title="My Strengths">My Strengths</button></a>|<a href="#section4"><button id="hobbyBox" title="My Hobbies">My Hobbies</button></a>|<a href="#section5"><button id="contactBox" title="Contact Me">Contact</button></a>
+						<a href="#work"><button id="workBox" class="btn btn-info" title="My Work">My Work</button></a>|<a href="#section3"><button id="strengthBox" class="btn btn-warning" title="My Strengths">My Strengths</button></a>|<a href="#section4"><button id="hobbyBox" class="btn btn-success" title="My Hobbies">My Hobbies</button></a>|<a href="#section5"><button id="contactBox" class="btn btn-danger" title="Contact Me">Contact</button></a>
 					</div>
 				</div>
 			</div>
@@ -48,6 +47,6 @@
 				</div>
 			</div>
 		</section>
-		<script type = "text/javascript" src = "assets/script.js"></script>
 	</body>
+	<script type = "text/javascript" src = "assets/script.js"></script>
 </html>
